@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --text-color: #34355B;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+
+  background: linear-gradient(45deg, #190361, #bb00ff);
+	animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  color: var(--text-color);
+}
+
+.screen-one, .screen-two {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  width: 42.8rem;
+  text-align: center;
+  
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.80);
+}
+
+p {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 1.4rem 0 2rem;
+}
+
+.biscoito-one {
+  display: block;
+  cursor: pointer;
+}
+
+.biscoito-one:hover{
+  animation: rotateImg .1s ease-in-out infinite;
+  
+}
+
+@keyframes rotateImg {
+ 0% {
+  transform: translateX(2%);
+ }
+ 10%{
+  transform: translateY(2%);
+ }
+
+}
+
+/* Screen 2 */
+
+.screen-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  padding-bottom: 4.8rem;
+}
+
+span {
+  display: block;
+  padding: 1rem;
+
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+
+  background: #E4EDF1;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+  animation: appear 2s;
+}
+
+.screen-two img {
+  padding: 4.2rem 0;
+}
+
+button {
+  width: 17.4rem;
+  padding: 1.6rem;
+
+  border: none;
+  border-radius: .4rem;
+  background: #FF9500;
+
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  transition: background .5s;
+}
+
+button:hover {
+  background: #fbab3b;
+  cursor: pointer;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(150%) scale(10%);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
